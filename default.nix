@@ -13,9 +13,7 @@ let
        overrides = self: super: {
          mkDerivation = expr:
            super.mkDerivation (expr // { enableLibraryProfiling = profiling; });
-         digit = self.callPackage ./nix/digit.nix {};
-         parsers-megaparsec = self.callPackage ./nix/parsers-megaparsec.nix {};
-         validation = self.callPackage ./nix/validation.nix {};
+         megaparsec = self.megaparsec_7_0_5;
        };
      };
 
